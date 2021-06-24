@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Let's Rank</title>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-xl navbar-dark mt-0 pt-0 sticky-top">
+        <div class="container">
+            <a href="index.html">
+                <img src="img/logo.svg" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse p-3" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li>
+                        <form class="d-flex" action="search.html">
+                            <div class="input-group">
+                                <span class="input-group-text searchBar bi bi-search" id="basic-addon1">
+                                </span>
+                                <input type="search" class="form-control searchBar" placeholder="Search">
+                            </div>
+                        </form>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto mt-3">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="index.html"><i class="bi bi-house"></i> Home</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="myLists.html"><i class="bi bi-list-ul"></i> My Lists</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <i class="bi bi-plus"></i> Create List
+                        </a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#"><i class="bi bi-box-arrow-left"></i> Logout</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-warning small" href="about.html"><i class="bi bi-question-circle"></i>
+                            How it
+                            works</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Create List Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-light" id="exampleModalLabel">New List</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <form action="">
+                    <div class="modal-body">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="listName" name="listName"
+                                placeholder="List Name" required>
+                            <label for="listName">List Name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <textarea name="listDescription" id="listDescription" class="form-control textarea-height"
+                                placeholder="Description"></textarea>
+                            <label for="listDescription">Description</label>
+                        </div>
+
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseOne">
+                                        Genres
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Action" id="Action"
+                                                name="genreAction">
+                                            <label class="form-check-label" for="Action">
+                                                Action
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Comedy" id="Comedy"
+                                                name="genreComedy">
+                                            <label class="form-check-label" for="Comedy">
+                                                Comedy
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Children"
+                                                id="Children" name="genreChildren">
+                                            <label class="form-check-label" for="Children">
+                                                Children
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Science-Fiction"
+                                                id="Science-Fiction" name="genreScienceFiction">
+                                            <label class="form-check-label" for="Science-Fiction">
+                                                Science-Fiction
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Fantasy" id="Fantasy"
+                                                name="genreFantasy">
+                                            <label class="form-check-label" for="Fantasy">
+                                                Fantasy
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button class="btn btn-primary" type="submit">Create</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <div class="row feaured mb-3">
+            <div class="col-8">
+                <h1>Top 10 Kids</h1>
+                <h6> by IMDB</h6>
+            </div>
+            <div class="col-4">
+                options
+            </div>
+        </div>
+        <div class="row">
+            <!-- Result #1 -->
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-3">
+                <div class="card shadow h-100">
+                    <h5 class="card-header text-truncate">LEGO Masters</h5>
+                    <div class="card-img-top">
+                        <div class="row m-0 p-0">
+                            <div class="col m-0 p-0">
+                                <img src="https://static.tvmaze.com/uploads/images/original_untouched/232/580561.jpg"
+                                    class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body p-0 m-0">
+                        <p class="card-genre text-center pt-2">Game Show | Children</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="showDetail.html" class="text-decoration-none d-block">
+                            <i class="bi bi-card-list"></i> Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Result #1 -->
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-3">
+                <div class="card shadow h-100">
+                    <h5 class="card-header text-truncate">Adventure Time</h5>
+                    <div class="card-img-top">
+                        <div class="row m-0 p-0">
+                            <div class="col m-0 p-0">
+                                <img src="https://static.tvmaze.com/uploads/images/original_untouched/134/335319.jpg"
+                                    class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body p-0 m-0">
+                        <p class="card-genre text-center pt-2">Comedy | Adventure | Children</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="showDetail.html" class="text-decoration-none d-block">
+                            <i class="bi bi-card-list"></i> Details
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Result #1 -->
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-3">
+                <div class="card shadow h-100">
+                    <h5 class="card-header text-truncate">SpongeBob SquarePants</h5>
+                    <div class="card-img-top">
+                        <div class="row m-0 p-0">
+                            <div class="col m-0 p-0">
+                                <img src="https://static.tvmaze.com/uploads/images/original_untouched/55/139502.jpg"
+                                    class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body p-1 mx-0 my-1">
+                        <p class="card-genre text-center">Comedy | Children</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="showDetail.html" class="text-decoration-none d-block">
+                            <i class="bi bi-card-list"></i> Details
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Result #1 -->
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-3">
+                <div class="card shadow h-100">
+                    <h5 class="card-header text-truncate">Invader ZIM</h5>
+                    <div class="card-img-top">
+                        <div class="row m-0 p-0">
+                            <div class="col m-0 p-0">
+                                <img src="https://static.tvmaze.com/uploads/images/original_untouched/2/6242.jpg"
+                                    class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body p-1 mx-0 my-1">
+                        <p class="card-genre text-center">Animation | Children</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="showDetail.html" class="text-decoration-none d-block">
+                            <i class="bi bi-card-list"></i> Details
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Result #1 -->
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-3">
+                <div class="card shadow h-100">
+                    <h5 class="card-header text-truncate">Sesame Street</h5>
+                    <div class="card-img-top">
+                        <div class="row m-0 p-0">
+                            <div class="col m-0 p-0">
+                                <img src="https://static.tvmaze.com/uploads/images/original_untouched/222/555972.jpg"
+                                    class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body p-1 mx-0 my-1">
+                        <p class="card-genre text-center">Children</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="showDetail.html" class="text-decoration-none d-block">
+                            <i class="bi bi-card-list"></i> Details
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Result #1 -->
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-3">
+                <div class="card shadow h-100">
+                    <h5 class="card-header text-truncate">Hey Arnold!</h5>
+                    <div class="card-img-top">
+                        <div class="row m-0 p-0">
+                            <div class="col m-0 p-0">
+                                <img src="https://static.tvmaze.com/uploads/images/original_untouched/24/61868.jpg"
+                                    class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body p-1 mx-0 my-1">
+                        <p class="card-genre text-center">Animation | Children</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="showDetail.html" class="text-decoration-none d-block">
+                            <i class="bi bi-card-list"></i> Details
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Result #1 -->
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-3">
+                <div class="card shadow h-100">
+                    <h5 class="card-header text-truncate">The Amazing World of Gumball</h5>
+                    <div class="card-img-top">
+                        <div class="row m-0 p-0">
+                            <div class="col m-0 p-0">
+                                <img src="https://static.tvmaze.com/uploads/images/original_untouched/17/43096.jpg"
+                                    class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body p-1 mx-0 my-1">
+                        <p class="card-genre text-center">Comedy | Children</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="showDetail.html" class="text-decoration-none d-block">
+                            <i class="bi bi-card-list"></i> Details
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Result #1 -->
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-3">
+                <div class="card shadow h-100">
+                    <h5 class="card-header text-truncate">Shaun the Sheep</h5>
+                    <div class="card-img-top">
+                        <div class="row m-0 p-0">
+                            <div class="col m-0 p-0">
+                                <img src="https://static.tvmaze.com/uploads/images/original_untouched/6/15005.jpg"
+                                    class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body p-1 mx-0 my-1">
+                        <p class="card-genre text-center">Comedy | Children</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="showDetail.html" class="text-decoration-none d-block">
+                            <i class="bi bi-card-list"></i> Details
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Result #1 -->
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-3">
+                <div class="card shadow h-100">
+                    <h5 class="card-header text-truncate">The Flintstones</h5>
+                    <div class="card-img-top">
+                        <div class="row m-0 p-0">
+                            <div class="col m-0 p-0">
+                                <img src="https://static.tvmaze.com/uploads/images/original_untouched/11/29907.jpg"
+                                    class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body p-1 mx-0 my-1">
+                        <p class="card-genre text-center">Adventure | Children</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="showDetail.html" class="text-decoration-none d-block">
+                            <i class="bi bi-card-list"></i> Details
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Result #1 -->
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-3">
+                <div class="card shadow h-100">
+                    <h5 class="card-header text-truncate">Fraggle Rock</h5>
+                    <div class="card-img-top">
+                        <div class="row m-0 p-0">
+                            <div class="col m-0 p-0">
+                                <img src="https://static.tvmaze.com/uploads/images/original_untouched/41/103828.jpg"
+                                    class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body p-1 mx-0 my-1">
+                        <p class="card-genre text-center">Variety | Children</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="showDetail.html" class="text-decoration-none d-block">
+                            <i class="bi bi-card-list"></i> Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- offcanvas -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header modal-header text-light">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">My Lists</h5>
+            <button type="button" class="btn-close text-reset btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="list-group list-group-flush">
+                <a href="myLists.html"
+                    class="list-group-item d-flex justify-content-between align-items-start list-group-item-action">
+                    <div class="ms-2 me-auto">
+                        Best Drama
+                    </div>
+                    <span class="badge bg-primary rounded-pill">7</span>
+                </a>
+                <a href="myLists.html"
+                    class="list-group-item d-flex justify-content-between align-items-start list-group-item-action active">
+                    <div class="ms-2 me-auto">
+                        Top Kids
+                    </div>
+                    <span class="badge bg-primary rounded-pill">10</span>
+                </a>
+                <a href="myLists.html"
+                    class="list-group-item d-flex justify-content-between align-items-start list-group-item-action">
+                    <div class="ms-2 me-auto">
+                        Recommended
+                    </div>
+                    <span class="badge bg-primary rounded-pill">7</span>
+                </a>
+                <a href="myLists.html"
+                    class="list-group-item d-flex justify-content-between align-items-start list-group-item-action">
+                    <div class="ms-2 me-auto">
+                        Action 90s
+                    </div>
+                    <span class="badge bg-primary rounded-pill">10</span>
+                </a>
+                <a href="myLists.html"
+                    class="list-group-item d-flex justify-content-between align-items-start list-group-item-action">
+                    <div class="ms-2 me-auto">
+                        All time favorite
+                    </div>
+                    <span class="badge bg-primary rounded-pill">9</span>
+                </a>
+                <a href="myLists.html"
+                    class="list-group-item d-flex justify-content-between align-items-start list-group-item-action">
+                    <div class="ms-2 me-auto">
+                        Want to watch
+                    </div>
+                    <span class="badge bg-primary rounded-pill">5</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="p-3 site-footer mt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 text-start">
+                    <a href="index.html" class="text-decoration-none border-end border-info px-2 text-nowrap">
+                        <i class="bi bi-house"></i> Home
+                    </a>
+                    <a href="myLists.html" class="text-decoration-none border-end border-info px-2 text-nowrap">
+                        <i class="bi bi-list-ul"></i> My List
+                    </a>
+                    <a href="about.html" class="text-decoration-none px-2 text-nowrap">
+                        <i class="bi bi-question"></i> Help
+                    </a>
+                </div>
+                <div class="col text-end">
+                    <p class="fs-6 text-nowrap">Copyright &copy; 2021 <strong>Let's Rank</strong></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-end">
+                    <p class="small">
+                        Powered by
+                        <a href="https://www.tvmaze.com/api" class="text-decoration-none" target="_blank">
+                            TVMAZE
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+    </script>
+    <script src="js/scripts.js"></script>
+
+</body>
+
+</html>
