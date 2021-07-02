@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Let's Rank</title>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-xl navbar-dark mt-0 pt-0 sticky-top">
+        <div class="container">
+            <a href="index.html">
+                <img src="img/logo.svg" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse p-3" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li>
+                        <form class="d-flex" action="search.html">
+                            <div class="input-group">
+                                <span class="input-group-text searchBar bi bi-search" id="basic-addon1">
+                                </span>
+                                <input type="search" class="form-control searchBar" placeholder="Search">
+                            </div>
+                        </form>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto mt-3">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="index.html"><i class="bi bi-house"></i> Home</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="myLists.html"><i class="bi bi-list-ul"></i> My Lists</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <i class="bi bi-plus"></i> Create List
+                        </a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#"><i class="bi bi-box-arrow-left"></i> Logout</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-warning small" href="about.html">
+                            <i class="bi bi-question-circle"></i> How it works
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Create List Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-light" id="exampleModalLabel">New List</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <form action="">
+                    <div class="modal-body">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="listName" name="listName"
+                                placeholder="List Name" required>
+                            <label for="listName">List Name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <textarea name="listDescription" id="listDescription" class="form-control textarea-height"
+                                placeholder="Description"></textarea>
+                            <label for="listDescription">Description</label>
+                        </div>
+
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseOne">
+                                        Genres
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Action" id="Action"
+                                                name="genreAction">
+                                            <label class="form-check-label" for="Action">
+                                                Action
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Comedy" id="Comedy"
+                                                name="genreComedy">
+                                            <label class="form-check-label" for="Comedy">
+                                                Comedy
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Children"
+                                                id="Children" name="genreChildren">
+                                            <label class="form-check-label" for="Children">
+                                                Children
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Science-Fiction"
+                                                id="Science-Fiction" name="genreScienceFiction">
+                                            <label class="form-check-label" for="Science-Fiction">
+                                                Science-Fiction
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Fantasy" id="Fantasy"
+                                                name="genreFantasy">
+                                            <label class="form-check-label" for="Fantasy">
+                                                Fantasy
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button class="btn btn-primary" type="submit">Create</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <div class="row feaured mb-3">
+            <div class="col">
+                <h1><i class="bi bi-stars"></i> Recommended Lists</h1>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Recommended List - Best for Kids-->
+            <div class="col-12 col-sm-6 col-lg-3 mb-3">
+                <div class="card shadow">
+                    <div class="card-header pb-0">
+                        <div class="">
+                            <h5 class="fw-bold">Best for Kids</h5>
+                        </div>
+                        <div class="rank text-end">
+                            Rank:
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+
+                        </div>
+                    </div>
+                    <div class="card-img-top">
+                        <div class="row m-0 p-0">
+                            <div class="col m-0 p-0">
+                                <img src="https://static.tvmaze.com/uploads/images/original_untouched/232/580561.jpg"
+                                    class="d-block w-100">
+                                <img src="https://static.tvmaze.com/uploads/images/original_untouched/273/684363.jpg"
+                                    class="d-block w-100">
+                            </div>
+                            <div class="col m-0 p-0">
+                                <img src="https://static.tvmaze.com/uploads/images/original_untouched/222/555972.jpg"
+                                    class="d-block w-100">
+                                <img src="https://static.tvmaze.com/uploads/images/original_untouched/56/140312.jpg"
+                                    class="d-block w-100">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="accordion accordion-flush" id="accordionFlushOne">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                        aria-controls="flush-collapseOne">
+                                        Preview
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushOne">
+                                    <div class="accordion-body px-0">
+                                        <ul class="list-group list-group-flush list-group-numbered">
+                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
+                                                LEGO Masters
+                                            </a>
+                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
+                                                Sesame Street
+                                            </a>
+                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
+                                                Bluey
+                                            </a>
+                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
+                                                DC Super Hero Girls
+                                            </a>
+                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
+                                                Fraggle Rock
+                                            </a>
+                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
+                                                Hero Elementary
+                                            </a>
+                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
+                                                Shaun the Sheep
+                                            </a>
+                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
+                                                Amazing Stories
+                                            </a>
+                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
+                                                Wizards: Tales of Arcadia
+                                            </a>
+                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
+                                                Helpsters
+                                            </a>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer d-flex justify-content-evenly">
+                        <a href="listDetail.html" class="text-decoration-none text-nowrap">
+                            <i class="bi bi-card-list"></i> Details
+                        </a>
+                        <a href="myLists.html" class="text-decoration-none text-nowrap">
+                            <i class="bi bi-plus-square"></i> Save list
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recommended List - #2-->
+            <div class="col-12 col-sm-6 col-lg-3 mb-3">
+                <div class="card shadow">
+                    <div class="card-header pb-0">
+                        <div class="">
+                            <h5 class="fw-bold">Kids favorites</h5>
+                        </div>
+                        <div class="rank text-end">
+                            Rank:
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>
+
+                        </div>
+                    </div>
+                    <div class="card-img-top">
+                        <div class="row m-0 p-0">
+                            <div class="col m-0 p-0">
+                                <img src="https://static.tvmaze.com/uploads/images/original_untouched/134/335319.jpg"
+                                    class="d-block w-100">
+                                <img src="https://static.tvmaze.com/uploads/images/original_untouched/24/61868.jpg"
+                                    class="d-block w-100">
+                            </div>
+                            <div class="col m-0 p-0">
+                                <img src="https://static.tvmaze.com/uploads/images/original_untouched/4/11712.jpg"
+                                    class="d-block w-100">
+                                <img src="https://static.tvmaze.com/uploads/images/original_untouched/264/661684.jpg"
+                                    class="d-block w-100">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="accordion accordion-flush" id="accordionFlushOne">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                        aria-controls="flush-collapseOne">
+                                        Preview
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushOne">
+                                    <div class="accordion-body px-0">
+                                        <ul class="list-group list-group-flush list-group-numbered">
+                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
+                                                LEGO Masters
+                                            </a>
+                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
+                                                Sesame Street
+                                            </a>
+                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
+                                                Bluey
+                                            </a>
+                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
+                                                DC Super Hero Girls
+                                            </a>
+                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
+                                                Fraggle Rock
+                                            </a>
+                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
+                                                Hero Elementary
+                                            </a>
+                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
+                                                Shaun the Sheep
+                                            </a>
+                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
+                                                Amazing Stories
+                                            </a>
+                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
+                                                Wizards: Tales of Arcadia
+                                            </a>
+                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
+                                                Helpsters
+                                            </a>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer d-flex justify-content-evenly">
+                        <a href="listDetail.html" class="text-decoration-none text-nowrap">
+                            <i class="bi bi-card-list"></i> Details
+                        </a>
+                        <a href="myLists.html" class="text-decoration-none text-nowrap">
+                            <i class="bi bi-plus-square"></i> Save list
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recommended List - #3-->
+            <div class="col-12 col-sm-6 col-lg-3 mb-3">
+                <div class="card shadow">
+                    <div class="card-header pb-0">
+                        <div class="">
+                            <h5 class="fw-bold">Kids classics</h5>
+                        </div>
+                        <div class="rank text-end">
+                            Rank:
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                            <i class="bi bi-star"></i>
+
+                        </div>
+                    </div>
+                    <div class="card-img-top">
+                        <div class="row m-0 p-0">
+                            <div class="col m-0 p-0">
+                                <img src="https://static.tvmaze.com/uploads/images/original_untouched/258/645846.jpg"
+                                    class="d-block w-100">
+                                <img src="https://static.tvmaze.com/uploads/images/original_untouched/222/555972.jpg"
+                                    class="d-block w-100">
+                            </div>
+                            <div class="col m-0 p-0">
+                                <img src="https://static.tvmaze.com/uploads/images/original_untouched/11/29907.jpg"
+                                    class="d-block w-100">
+                                <img src="https://static.tvmaze.com/uploads/images/original_untouched/146/367146.jpg"
+                                    class="d-block w-100">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="accordion accordion-flush" id="accordionFlushOne">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                        aria-controls="flush-collapseOne">
+                                        Preview
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushOne">
+                                    <div class="accordion-body px-0">
+                                        <ul class="list-group list-group-flush list-group-numbered">
+                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
+                                                LEGO Masters
+                                            </a>
+                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
+                                                Sesame Street
+                                            </a>
+                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
+                                                Bluey
+                                            </a>
+                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
+                                                DC Super Hero Girls
+                                            </a>
+                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
+                                                Fraggle Rock
+                                            </a>
+                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
+                                                Hero Elementary
+                                            </a>
+                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
+                                                Shaun the Sheep
+                                            </a>
+                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
+                                                Amazing Stories
+                                            </a>
+                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
+                                                Wizards: Tales of Arcadia
+                                            </a>
+                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
+                                                Helpsters
+                                            </a>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer d-flex justify-content-evenly">
+                        <a href="listDetail.html" class="text-decoration-none text-nowrap">
+                            <i class="bi bi-card-list"></i> Details
+                        </a>
+                        <a href="myLists.html" class="text-decoration-none text-nowrap">
+                            <i class="bi bi-plus-square"></i> Save list
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="p-3 site-footer mt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 text-start">
+                    <a href="index.html" class="text-decoration-none border-end border-info px-2 text-nowrap">
+                        <i class="bi bi-house"></i> Home
+                    </a>
+                    <a href="myLists.html" class="text-decoration-none border-end border-info px-2 text-nowrap">
+                        <i class="bi bi-list-ul"></i> My List
+                    </a>
+                    <a href="about.html" class="text-decoration-none px-2 text-nowrap">
+                        <i class="bi bi-question"></i> Help
+                    </a>
+                </div>
+                <div class="col text-end">
+                    <p class="fs-6 text-nowrap">Copyright &copy; 2021 <strong>Let's Rank</strong></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-end">
+                    <p class="small">
+                        Powered by
+                        <a href="https://www.tvmaze.com/api" class="text-decoration-none" target="_blank">
+                            TVMAZE
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

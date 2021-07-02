@@ -51,3 +51,7 @@ body {
 .card-genre {
     font-size: .75rem;
 }
+
+.rank {
+    color: #2C7DA0;
+}
