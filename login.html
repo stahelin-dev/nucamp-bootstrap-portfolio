@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Let's Rank</title>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-sm navbar-dark mt-0 pt-0 sticky-top">
+        <div class="container">
+            <a href="index.html">
+                <img src="img/logo.svg" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse p-3" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mt-3">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="index.html"><i class="bi bi-house"></i> Home</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-warning active" href="#"><i class="bi bi-question-circle"></i>
+                            How it works
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div class="container mt-4">
+        <div class="row justify-content-center mb-5">
+            <div class="col-12 col-sm-6 col-lg-5 featured" id="login">
+                <div class="card">
+                    <div class="card-header">
+                        <h1>Login</h1>
+                    </div>
+                    <div class="card-body">
+                        <form action="index.html">
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1"
+                                    placeholder="Password">
+                            </div>
+                            <div class="mb-1">
+                                <button type="submit" class="btn btn-primary">Login</button>
+                            </div>
+                            <div class="mb-4">
+                                <a href=""> <small>Forgot Your Password?</small></a>
+                            </div>
+                            <hr>
+                            <div class="text-center">
+                                <a href="#" id="signupBtn">Don't have an account? SignUp here</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-5 d-none featured" id="signup">
+                <div class="card">
+                    <div class="card-header">
+                        <h1>SignUp</h1>
+                    </div>
+                    <div class="card-body">
+                        <form action="index.html">
+                            <div class="row">
+                                <div class="input-group">
+                                    <label for="exampleInputPassword1" class="form-label">Username</label>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-text">@</div>
+                                    <input type="text" class="form-control" placeholder="Username">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                        placeholder="Email">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1"
+                                        placeholder="Password">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1"
+                                        placeholder="Password">
+                                </div>
+                                <div class="mb-4 d-flex justify-content-end">
+                                    <button type="submit" class="btn btn-primary">SignUp</button>
+                                </div>
+                                <hr>
+                                <div class="text-center">
+                                    <a href="#" id="loginBtn">Already have an account? Login here</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="p-3 site-footer mt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 text-start">
+                    <a href="index.html" class="text-decoration-none border-end border-info px-2 text-nowrap">
+                        <i class="bi bi-house"></i> Home
+                    </a>
+                    <a href="about.html" class="text-decoration-none px-2 text-nowrap">
+                        <i class="bi bi-question"></i> Help
+                    </a>
+                </div>
+                <div class="col text-end">
+                    <p class="fs-6 text-nowrap">Copyright &copy; 2021 <strong>Let's Rank</strong></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-end">
+                    <p class="small">
+                        Powered by
+                        <a href="https://www.tvmaze.com/api" class="text-decoration-none" target="_blank">
+                            TVMAZE
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+    </script>
+    <script src="./js/scripts.js"></script>
+</body>
+
+</html>
