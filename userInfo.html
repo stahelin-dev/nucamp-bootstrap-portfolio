@@ -46,12 +46,12 @@
                         <a class="nav-link" href="myLists.html"><i class="bi bi-list-ul"></i> My Lists</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#createList">
                             <i class="bi bi-plus"></i> Create List
                         </a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link" href="#"><i class="bi bi-box-arrow-left"></i> Logout</a>
+                        <a class="nav-link" href="login.html"><i class="bi bi-box-arrow-in-left"></i> Login/SignUp</a>
                     </li>
                     <li class="nav-item mx-2">
                         <a class="nav-link text-warning small" href="about.html">
@@ -65,7 +65,7 @@
     </nav>
 
     <!-- Create List Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="createList" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -147,213 +147,23 @@
     </div>
 
     <div class="container mt-4">
+
+
+        <!-- Main Content -->
         <div class="row featured mb-3">
             <div class="col">
-                <h1><i class="bi bi-stars"></i> Recommended Lists</h1>
+                <h1>User#931 Lists</h1>
             </div>
         </div>
+
         <div class="row">
-            <!-- Recommended List - Best for Kids-->
-            <div class="col-12 col-sm-6 col-lg-3 mb-3">
-                <div class="card shadow">
-                    <div class="card-header pb-0">
-                        <div class="">
-                            <h5 class="fw-bold">Best for Kids</h5>
-                            <p class="fs-6 mb-0 text-end">by user#01</p>
-                        </div>
 
-                    </div>
-                    <div class="card-img-top">
-                        <div class="row m-0 p-0">
-                            <div class="col m-0 p-0">
-                                <img src="https://static.tvmaze.com/uploads/images/original_untouched/232/580561.jpg"
-                                    class="d-block w-100">
-                                <img src="https://static.tvmaze.com/uploads/images/original_untouched/273/684363.jpg"
-                                    class="d-block w-100">
-                            </div>
-                            <div class="col m-0 p-0">
-                                <img src="https://static.tvmaze.com/uploads/images/original_untouched/222/555972.jpg"
-                                    class="d-block w-100">
-                                <img src="https://static.tvmaze.com/uploads/images/original_untouched/56/140312.jpg"
-                                    class="d-block w-100">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body p-0">
-                        <div class="rank text-end mt-2 pe-2">
-                            Match:
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-half"></i>
-
-                        </div>
-                        <div class="accordion accordion-flush" id="accordionFlushOne">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="flush-headingOne">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#flush-collapseOne" aria-expanded="false"
-                                        aria-controls="flush-collapseOne">
-                                        Preview
-                                    </button>
-                                </h2>
-                                <div id="flush-collapseOne" class="accordion-collapse collapse"
-                                    aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushOne">
-                                    <div class="accordion-body px-0">
-                                        <ul class="list-group list-group-flush list-group-numbered">
-                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
-                                                LEGO Masters
-                                            </a>
-                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
-                                                Sesame Street
-                                            </a>
-                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
-                                                Bluey
-                                            </a>
-                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
-                                                DC Super Hero Girls
-                                            </a>
-                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
-                                                Fraggle Rock
-                                            </a>
-                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
-                                                Hero Elementary
-                                            </a>
-                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
-                                                Shaun the Sheep
-                                            </a>
-                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
-                                                Amazing Stories
-                                            </a>
-                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
-                                                Wizards: Tales of Arcadia
-                                            </a>
-                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
-                                                Helpsters
-                                            </a>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-footer d-flex justify-content-evenly">
-                        <a href="listDetail.html" class="text-decoration-none text-nowrap">
-                            <i class="bi bi-card-list"></i> Details
-                        </a>
-                        <a href="myLists.html" class="text-decoration-none text-nowrap">
-                            <i class="bi bi-plus-square"></i> Save list
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Recommended List - #2-->
-            <div class="col-12 col-sm-6 col-lg-3 mb-3">
-                <div class="card shadow">
-                    <div class="card-header pb-0">
-                        <div class="">
-                            <h5 class="fw-bold">Kids favorites</h5>
-                            <p class="fs-6 mb-0 text-end">by user#32</p>
-                        </div>
-
-                    </div>
-                    <div class="card-img-top">
-                        <div class="row m-0 p-0">
-                            <div class="col m-0 p-0">
-                                <img src="https://static.tvmaze.com/uploads/images/original_untouched/134/335319.jpg"
-                                    class="d-block w-100">
-                                <img src="https://static.tvmaze.com/uploads/images/original_untouched/24/61868.jpg"
-                                    class="d-block w-100">
-                            </div>
-                            <div class="col m-0 p-0">
-                                <img src="https://static.tvmaze.com/uploads/images/original_untouched/4/11712.jpg"
-                                    class="d-block w-100">
-                                <img src="https://static.tvmaze.com/uploads/images/original_untouched/264/661684.jpg"
-                                    class="d-block w-100">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body p-0">
-                        <div class="rank text-end mt-2 pe-2">
-                            Match:
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star"></i>
-
-                        </div>
-                        <div class="accordion accordion-flush" id="accordionFlushOne">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="flush-headingOne">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#flush-collapseOne" aria-expanded="false"
-                                        aria-controls="flush-collapseOne">
-                                        Preview
-                                    </button>
-                                </h2>
-                                <div id="flush-collapseOne" class="accordion-collapse collapse"
-                                    aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushOne">
-                                    <div class="accordion-body px-0">
-                                        <ul class="list-group list-group-flush list-group-numbered">
-                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
-                                                LEGO Masters
-                                            </a>
-                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
-                                                Sesame Street
-                                            </a>
-                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
-                                                Bluey
-                                            </a>
-                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
-                                                DC Super Hero Girls
-                                            </a>
-                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
-                                                Fraggle Rock
-                                            </a>
-                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
-                                                Hero Elementary
-                                            </a>
-                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
-                                                Shaun the Sheep
-                                            </a>
-                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
-                                                Amazing Stories
-                                            </a>
-                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
-                                                Wizards: Tales of Arcadia
-                                            </a>
-                                            <a href="showDetail.html" class="list-group-item list-group-item-action">
-                                                Helpsters
-                                            </a>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-footer d-flex justify-content-evenly">
-                        <a href="listDetail.html" class="text-decoration-none text-nowrap">
-                            <i class="bi bi-card-list"></i> Details
-                        </a>
-                        <a href="myLists.html" class="text-decoration-none text-nowrap">
-                            <i class="bi bi-plus-square"></i> Save list
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Recommended List - #3-->
+            <!-- User List #1-->
             <div class="col-12 col-sm-6 col-lg-3 mb-3">
                 <div class="card shadow">
                     <div class="card-header pb-0">
                         <div class="">
                             <h5 class="fw-bold">Kids classics</h5>
-                            <a href="userInfo.html" class="text-decoration-none">
-                                <p class="fs-6 mb-0 text-end">by user#931</p>
-                            </a>
                         </div>
                     </div>
                     <div class="card-img-top">
@@ -373,14 +183,6 @@
                         </div>
                     </div>
                     <div class="card-body p-0">
-                        <div class="rank text-end mt-2 pe-2">
-                            Match:
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-half"></i>
-                            <i class="bi bi-star"></i>
-                        </div>
                         <div class="accordion accordion-flush" id="accordionFlushOne">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="flush-headingOne">
@@ -441,8 +243,76 @@
                 </div>
             </div>
 
+            <!-- User List #2-->
+            <div class="col-12 col-sm-6 col-lg-3 mb-3">
+                <div class="card shadow">
+                    <div class="card-header pb-0">
+                        <h5 class="fw-bold">Best of Netflix</h5>
+                    </div>
+                    <div class="card-img-top">
+                        <div class="row m-0 p-0">
+                            <div class="col m-0 p-0">
+                                <img src="https://static.tvmaze.com/uploads/images/original_untouched/245/614461.jpg"
+                                    class="d-block w-100" alt="...">
+                                <img src="https://static.tvmaze.com/uploads/images/original_untouched/246/616504.jpg"
+                                    class="d-block w-100" alt="...">
+                            </div>
+                            <div class="col m-0 p-0">
+                                <img src="https://static.tvmaze.com/uploads/images/original_untouched/172/431207.jpg"
+                                    class="d-block w-100" alt="...">
+                                <img src="https://static.tvmaze.com/uploads/images/original_untouched/277/692659.jpg"
+                                    class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="accordion accordion-flush" id="accordionFlushThree">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseThree">
+                                        Preview
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFlushThree">
+                                    <div class="accordion-body px-0">
+                                        <ul class="list-group list-group-flush list-group-numbered">
+                                            <li class="list-group-item list-group-item-action">The Baby-Sitters Club
+                                            </li>
+                                            <li class="list-group-item list-group-item-action">Feel Good</li>
+                                            <li class="list-group-item list-group-item-action">Mystery Science Theater
+                                                3000</li>
+                                            <li class="list-group-item list-group-item-action">Dash & Lily</li>
+                                            <li class="list-group-item list-group-item-action">Ugly Delicious</li>
+                                            <li class="list-group-item list-group-item-action">Giri/Haji</li>
+                                            <li class="list-group-item list-group-item-action">Immigration Nation</li>
+                                            <li class="list-group-item list-group-item-action">Dirty Money</li>
+                                            <li class="list-group-item list-group-item-action">Blood of Zeus</li>
+                                            <li class="list-group-item list-group-item-action">The Confession Killer
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer d-flex justify-content-evenly">
+                        <a href="listDetail.html" class="text-decoration-none text-nowrap">
+                            <i class="bi bi-card-list"></i> Details
+                        </a>
+                        <a href="myLists.html" class="text-decoration-none text-nowrap">
+                            <i class="bi bi-plus-square"></i> Save list
+                        </a>
+                    </div>
+                </div>
+            </div>
+
         </div>
+
+
     </div>
+
 
     <!-- Footer -->
     <footer class="p-3 site-footer mt-4">
